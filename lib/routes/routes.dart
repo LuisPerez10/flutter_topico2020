@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:serviciosweb/pages/loading_page.dart';
-import 'package:serviciosweb/pages/login_page.dart';
-import 'package:serviciosweb/pages/register_page.dart';
-import 'package:serviciosweb/pages/settinguser_page.dart';
+import 'package:serviciosweb/pages/registerTrabajador_page.dart';
+import 'package:serviciosweb/pages/trabajador_servicio_page.dart';
+import 'package:serviciosweb/pages/welcome_page.dart';
 
 final Map<String, Widget Function(BuildContext)> appRoutes = {
-  'login': (_) => LoginPage(),
-  'register': (_) => RegisterPage(),
-  'loading': (_) => LoadingPage(),
-  'settinguser': (_) => SettingUserPage()
+  'trabajador_servicio': (_) => TrabajadorServicioPage(),
+  'register_trabajador': (_) => RegisterTrabajadorPage(),
+  'welcome': (_) => WelcomePage(),
 };

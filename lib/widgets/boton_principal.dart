@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class BotonAzul extends StatelessWidget {
+class BotonPrincipal extends StatelessWidget {
   final String text;
   final Function onPressed;
 
-  const BotonAzul({Key key, @required this.text, @required this.onPressed})
+  const BotonPrincipal({Key key, @required this.text, @required this.onPressed})
       : super(key: key);
 
   @override
@@ -12,7 +12,7 @@ class BotonAzul extends StatelessWidget {
     return RaisedButton(
       elevation: 2,
       highlightElevation: 5,
-      color: Colors.blue,
+      color: Theme.of(context).primaryColor,
       shape: StadiumBorder(),
       onPressed: this.onPressed,
       child: Container(
