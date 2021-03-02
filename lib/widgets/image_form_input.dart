@@ -36,6 +36,7 @@ class ImageFormInput extends FormField<PickedFile> {
 }
 
 Widget vistaFoto(BuildContext context, FormFieldState<PickedFile> state) {
+  var primaryColor = Theme.of(context).primaryColor;
   return GestureDetector(
     onTap: () async {
       await _seleccionarFoto(context, state);
@@ -58,10 +59,9 @@ Widget vistaFoto(BuildContext context, FormFieldState<PickedFile> state) {
               children: [
                 Icon(
                   Icons.edit,
-                  color: Theme.of(context).primaryColor,
+                  color: primaryColor,
                 ),
-                Text('agregar perfil',
-                    style: TextStyle(color: Theme.of(context).primaryColor)),
+                Text('agregar perfil', style: TextStyle(color: primaryColor)),
               ],
             ),
           ),
@@ -109,7 +109,11 @@ Future _seleccionarFoto(
             BotonPrincipal(
                 text: "ABRIR GALERIA",
                 onPressed: () async {
-                  await _procesarImagen(ImageSource.gallery);
+                  await _procesarImagen(ImageSource.gallery).then((value) {
+                    if (value != null) {
+                      state.didChange(value);
+                    }
+                  });
                   Navigator.pop(context);
                 }),
           ],

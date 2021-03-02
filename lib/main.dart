@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:serviciosweb/routes/routes.dart';
-import 'package:serviciosweb/services/auth_service.dart';
 import 'package:serviciosweb/services/categoria_services.dart';
 import 'package:serviciosweb/services/horario_service.dart';
 import 'package:serviciosweb/services/servicio_services.dart';
@@ -32,8 +31,8 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Tarea IV',
-          initialRoute: 'register_trabajador',
-          // initialRoute: 'trabajador_servicio',
+          // initialRoute: 'register_trabajador',
+          initialRoute: 'welcome',
           routes: appRoutes,
           theme: ThemeData(primaryColor: Color.fromARGB(255, 252, 96, 17)),
         ));

@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:serviciosweb/models/categoria.dart';
 import 'package:serviciosweb/widgets/custom_loading.dart';
 
 class GridWidget extends StatelessWidget {
